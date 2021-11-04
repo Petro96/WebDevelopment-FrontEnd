@@ -7,9 +7,9 @@ function animatedForm() {
 
     arrows.forEach(arrow => {
         arrow.addEventListener("click", () => {
-            const input = arrow.previousElementSibling; // arrow
-            const parent = arrow.parentElement; // icon top
-            const nextForm = parent.nextElementSibling; // input
+            const input = arrow.previousElementSibling; // input
+            const parent = arrow.parentElement; // div
+            const nextForm = parent.nextElementSibling; // next arrow input
 
             //check
 
@@ -25,7 +25,7 @@ function animatedForm() {
                 parent.style.animation = "shake 0.5s ease";
             }
 
-            parent.addEventListener('animationend', () => {
+            parent.addEventListener('animationend', () => { //reset shake
                 parent.style.animation = "";
             })
 
